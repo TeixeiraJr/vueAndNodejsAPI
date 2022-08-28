@@ -1,0 +1,10 @@
+services:
+  backend:
+      container_name: 'api'
+      build: ./backend
+      ports:
+        - '3000:3000'
+  frontend:
+    build: ./frontend/userform
+    ports:
+      - '8080:8080'
