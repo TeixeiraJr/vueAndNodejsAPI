@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cross-var vue-cli-service serve --port $PORT",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "cross-var": "^1.1.0",
     "spectre.css": "^0.5.9",
     "vue": "^3.2.13",
     "vue-the-mask": "^0.11.1"
