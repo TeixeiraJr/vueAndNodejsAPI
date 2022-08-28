@@ -1,10 +1,13 @@
-const users = require('../database/repository/users');
+const usersRepo = require('../database/repository/users');
 
 module.exports = {
 
-    async runExampleQueryNeo4j( req , res ) {
-        const users = await users.run();
-        return res.json(users)
+    async createUser( req , res ) {
+        const status = await usersRepo.createUser(req.body);
+        if (status) {
+            return res.json({message:'Usuário criado com sucesso'});
+        }
+        return res.status(400).json({message:'houve um problema na requisição, revise os dados enviados'})
     }
     
 }
