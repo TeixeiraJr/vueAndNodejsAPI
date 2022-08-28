@@ -1,0 +1,4 @@
+build:
+  docker:
+    worker: backend/Dockerfile
+    worker: frontend/userform/Dockerfile

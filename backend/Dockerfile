@@ -9,6 +9,6 @@ COPY . .
 
 COPY .env .
 
-EXPOSE 3000
+EXPOSE $PORT
 
 CMD node src/index.js
