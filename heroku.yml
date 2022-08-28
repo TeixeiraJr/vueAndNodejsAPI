@@ -1,4 +1,7 @@
 build:
   docker:
     web: backend/Dockerfile
-    web: frontend/userform/Dockerfile
+    worker: frontend/userform/Dockerfile
+  run:
+    web: npm src/start
+    worker: npm run serve
