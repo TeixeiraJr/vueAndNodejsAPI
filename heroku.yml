@@ -3,5 +3,5 @@ build:
     web: backend/Dockerfile
     worker: frontend/userform/Dockerfile
 run:
-  web: npm src/start
-  worker: npm run serve
+  web: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent main:app
+  worker: gunicorn -w 4 -b 0.0.0.0:$PORT -k gevent main:app
