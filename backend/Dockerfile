@@ -7,7 +7,6 @@ RUN npm install
 
 COPY . .
 
-COPY .env .
 
 EXPOSE $PORT
 
