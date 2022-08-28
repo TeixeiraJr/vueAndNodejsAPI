@@ -4,4 +4,4 @@ build:
     worker: frontend/userform/Dockerfile
 run:
   web: node src/index.js
-  worker: npm run serve
+  worker: npm run serve -- --port $PORT
